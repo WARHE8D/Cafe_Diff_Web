@@ -1,0 +1,27 @@
+{
+  "name": "cafe_diff_web",
+  "version": "1.0.0",
+  "description": "Web app for CafeDiff using Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WARHE8D/Cafe_Diff_Web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WARHE8D/Cafe_Diff_Web/issues"
+  },
+  "homepage": "https://github.com/WARHE8D/Cafe_Diff_Web#readme",
+  "devDependencies": {
+    "create-start": "^1.6.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "nodemon": "^3.1.10"
+  }
+}
