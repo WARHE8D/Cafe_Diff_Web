@@ -4,6 +4,7 @@ const path = require("path");
 const port = 8081;
 const appDir = path.dirname(require.main.filename);
 const { body, validationResult } = require("express-validator");
+const { redisClient, connectRedis } = require('./redisClient');
 
 /// Set the view engine to EJS
 app.set("view engine", "ejs");
@@ -19,8 +20,12 @@ app.use(express.urlencoded({ extended: true }));
 // Allow express to handle JSON for validation
 app.use(express.json());
 
-app.listen(port, () => {
-  console.log("server running at:", port);
+// Connect Redis before starting the server
+connectRedis().then(() => {
+  app.listen(port, () => {//express server
+    console.log("Redis connected"); 
+    console.log('Server running on http://localhost:' + port);
+  });
 });
 
 //for / and home to used as same
@@ -78,7 +83,7 @@ app.post(
   ],
   (req, res) => {
     const errors = validationResult(req);
-    if (!errors.isEmpty()) {
+    if (!errors.nopisEmpty()) {
   return res.status(400).render("register", {
     errors: errors.array(),
     oldInput: req.body
