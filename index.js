@@ -29,3 +29,21 @@ app.get(["/", "/home"], (req, res) => {
       pageTitle: "Cafe Diff",
     });
 });
+
+app.get("/featuredgames", (req, res) => {
+  res.render("featuredgames", {
+    pageTitle: "Cafe Diff",
+  });
+});
+
+app.get("/login", (req, res) => {
+  res.render("login", {
+    pageTitle: "Cafe Diff",
+  });
+});
+
+app.get("/register", (req, res) => {
+  res.render("register", {
+    pageTitle: "Cafe Diff",
+  });
+});

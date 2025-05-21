@@ -1,0 +1,101 @@
+a:link {
+  text-decoration: none;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* This stacks elements vertically */
+}
+
+/* === Container Box === */
+.form-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+}
+
+/* === Headings === */
+.form-box h2 {
+  text-align: center;
+  color: #CF9FFF;
+  margin-bottom: 1.5rem;
+}
+
+/* === Input Fields === */
+.form-control {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.form-control:focus {
+  border-color: #CF9FFF;
+  box-shadow: none;
+}
+
+/* === Buttons === */
+.btn-theme {
+  background-color: #CF9FFF;
+  color: #000;
+  border: none;
+}
+
+.btn-theme:hover {
+  background-color: #bb85eb;
+}
+
+/* === Utility === */
+.text-purple {
+  color: #CF9FFF;
+}
+
+/* === Navbar Accent === */
+.border-purple {
+  border-color: #CF9FFF !important;
+}
+
+.text-purple {
+  color: #CF9FFF !important;
+}
+
+.btn-purple {
+  background-color: #CF9FFF;
+  color: #000;
+  border: none;
+}
+
+.btn-purple:hover {
+  background-color: #bb85eb;
+  color: #000;
+}
+
+.btn-outline-purple {
+  color: #CF9FFF;
+  border: 1px solid #CF9FFF;
+}
+
+.btn-outline-purple:hover {
+  background-color: #CF9FFF;
+  color: #000;
+}
+.border-purple {
+  border-color: #CF9FFF !important;
+}
+
+.text-purple {
+  color: #CF9FFF !important;
+}
+
+.text-purple:hover {
+  color: #bb85eb !important;
+}
+
+.text-muted {
+  color: #aaa !important;
+}
