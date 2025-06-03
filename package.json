@@ -27,6 +27,7 @@
     "nodemon": "^3.1.10"
   },
   "dependencies": {
+    "cafe_diff_web": "file:",
     "redis": "^5.1.0"
   }
 }

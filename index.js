@@ -8,7 +8,6 @@ const { redisClient, connectRedis } = require('./redisClient');
 
 /// Set the view engine to EJS
 app.set("view engine", "ejs");
-// console.log("asdasdas: " + path.join(appDir, "public", "views"));
 // Set the absolute path to the views directory
 app.set("views", path.join(appDir, "public", "views"));
 
@@ -36,6 +35,7 @@ app.get(["/", "/home"], (req, res) => {
 });
 
 app.get("/featuredgames", (req, res) => {
+  
   res.render("featuredgames", {
     pageTitle: "Cafe Diff",
   });

@@ -2,7 +2,8 @@
 const { createClient } = require('redis');
 
 const redisClient = createClient({
-  url: 'redis://redis:6379' // Use Docker service name
+  url: 'redis://localhost:6379' // Use Docker service name
+  // url: 'redis://redis:6379' // Use Docker service name
 });
 
 redisClient.on('error', (err) => console.error('Redis Client Error', err));
