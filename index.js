@@ -4,7 +4,7 @@ const path = require("path");
 const port = 8081;
 const appDir = path.dirname(require.main.filename);
 const { body, validationResult } = require("express-validator");
-const { redisClient, connectRedis } = require('./redisClient');
+const { redisClient, connectRedis } = require('./api/redisClient');
 
 /// Set the view engine to EJS
 app.set("view engine", "ejs");
