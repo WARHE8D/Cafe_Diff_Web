@@ -10,7 +10,7 @@ Note: Redis will be deployed on docker later
 npm init -y
 
 ### Step 2: Install required dependencies
-npm i --save-dev nodemon ejs express express-validator create-start redis
+npm i --save-dev nodemon ejs express express-validator create-start redis axios
 
 ### Step 3: Start the server
 npm run start
