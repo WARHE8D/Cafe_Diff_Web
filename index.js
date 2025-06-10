@@ -6,6 +6,10 @@ const appDir = path.dirname(require.main.filename);
 const { body, validationResult } = require("express-validator");
 const { redisClient, connectRedis } = require('./api/redisClient');
 
+
+//server API calls
+const getHome = require('./api/serverApi');
+
 /// Set the view engine to EJS
 app.set("view engine", "ejs");
 // Set the absolute path to the views directory
@@ -28,10 +32,18 @@ connectRedis().then(() => {
 });
 
 //for / and home to used as same
-app.get(["/", "/home"], (req, res) => {
+app.get(["/", "/home"], async  (req, res) => {
+  try {
+    const homeData = await getHome(); 
+    console.log("Home Data:", homeData); // Log the data for debugging
     res.render("index", {
       pageTitle: "Cafe Diff",
     });
+  } catch (error) {
+    console.error("Error in /home route:", error);
+    return res.status(500).send("Internal Server Error");
+  }
+    
 });
 
 app.get("/featuredgames", (req, res) => {

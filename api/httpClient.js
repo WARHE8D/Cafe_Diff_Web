@@ -1,3 +1,6 @@
+//base config for axios
+// This file sets up a base configuration for axios to be used in the application.
+
 const axios = require('axios');
 
 const httpClient = axios.create({
