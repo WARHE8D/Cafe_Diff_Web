@@ -95,7 +95,7 @@ app.post(
   ],
   (req, res) => {
     const errors = validationResult(req);
-    if (!errors.nopisEmpty()) {
+    if (!errors) {
   return res.status(400).render("register", {
     errors: errors.array(),
     oldInput: req.body
